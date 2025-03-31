@@ -8,7 +8,7 @@ from langgraph.graph import StateGraph, START, END
 os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 #Initialize LLM
-llm = ChatGroq(model_name="qwen-2.5-32b")
+llm = ChatGroq(model_name="llama3-70b-8192")
 
 #State dictionary thats keeps track of information throughout the workflow
 class State(TypedDict):
@@ -122,7 +122,7 @@ st.markdown(
 )
 
 #Get user input for the topic
-topic = st.text_input("Enter the topic for the PR statement:", "Company's AI-Powered Chatbot Launch")
+topic = st.text_input("Enter the Topic for the PR Statement:", "Company's AI-Powered Chatbot Launch")
 
 #Track generation process
 if st.button("Generate PR Statement"):
@@ -145,4 +145,4 @@ if st.button("Generate PR Statement"):
         st.write(state["pr_statement"])
 
 st.markdown("---")
-st.caption("Powered by **LangGraph, Groq** 🚀")
+st.markdown("### 🔗 Powered by LangGraph, Groq 🚀")
