@@ -144,5 +144,5 @@ if st.button("Generate PR Statement"):
         st.subheader("Generated PR Statement:")
         st.write(state["pr_statement"])
 
-st.markdown("---")
-st.markdown("### 🔗 Powered by LangGraph, Groq 🚀")
+        st.markdown("---")
+        st.markdown("#### 🔗 Powered by LangGraph, Groq 🚀")
