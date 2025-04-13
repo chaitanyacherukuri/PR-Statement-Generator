@@ -87,8 +87,8 @@ workflow.add_conditional_edges("Evaluate_PR_Statement", route_statement, {"Accep
 #Compile the workflow
 graph = workflow.compile()
 
-#Streamlit UI
-st.title("📝 AI-Powered PR Statement Generator")
+# 🎨 Streamlit UI - Frontend
+st.set_page_config(page_title="📝 PR Statement Generator", layout="wide")
 
 #Add sidebar with workflow diagram
 with st.sidebar:
@@ -110,6 +110,8 @@ with st.sidebar:
         st.info("The workflow still functions correctly even without the visualization.")
 
 #Main content
+st.title("📝 AI-Powered PR Statement Generator")
+
 st.markdown(
     """
     Welcome to the AI-powered PR Statement Generator! 🚀
